@@ -17,9 +17,10 @@ fun <T> myCheckNotNull(value: T?, message: () -> String): T {
 
 fun <T> run() {
     val person: Person? = null
+
     lateinit var person2: Person
     val validatedPerson =
-        myRequireNotNull<Person>(value = person) { "person must not be null" }
+        myCheckNotNull<Person>(value = person) { "person must not be null" }
     val validatedName = validatedPerson.name
     println(validatedName)
 

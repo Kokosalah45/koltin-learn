@@ -29,6 +29,7 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+    implementation(libs.kotlinxCollectionsImmutable)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -40,7 +41,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "playground.main.AppKt"
+    mainClass = "playground.main.main"
 }
 
 tasks.named<Test>("test") {
